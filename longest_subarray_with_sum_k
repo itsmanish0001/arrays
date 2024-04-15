@@ -1,3 +1,6 @@
+
+//works for all positives, negatives, zeros
+
 class Solution{
     public:
     int lenOfLongSubarr(int A[],  int N, int K) 
