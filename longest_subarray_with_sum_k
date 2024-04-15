@@ -1,4 +1,4 @@
-
+this is optimal for arrays with positives, negatives, and zeros..........
 //works for all positives, negatives, zeros
 
 class Solution{
@@ -29,3 +29,35 @@ class Solution{
     } 
 
 };
+
+
+
+more optimal if array have only positives...........
+
+int left = 0;
+int right = 0;
+long long sum = arr[0];
+int ans = 0;
+int n = arr.size();
+
+while(right < n){
+
+while(left <= right && sum > k){
+sum = sum - arr[left];
+left++;
+}
+
+if(sum == k){
+ans = max(ans, right - left + 1);
+}
+
+right++;
+if(right < n){
+sum = sum + arr[right];
+}
+
+return ans;
+
+
+}
+
